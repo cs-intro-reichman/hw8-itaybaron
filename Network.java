@@ -152,13 +152,19 @@ public class Network {
     public String toString() {
     
         StringBuilder sb = new StringBuilder();
-        sb.append("Network:").append(System.lineSeparator());
+        sb.append("Network:");
 
-        for (int i = 0; i < userCount; i++) {
-        sb.append(users[i]).append(System.lineSeparator());
+        if (userCount > 0) {
+            sb.append(System.lineSeparator());
         }
 
-    return sb.toString();
+        for (int i = 0; i < userCount; i++) {
+            sb.append(users[i]);
+            if (i < userCount - 1){
+        sb.append(System.lineSeparator());
+        }
     }
-
+    return sb.toString();
+ 
+ }
 }
