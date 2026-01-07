@@ -99,13 +99,13 @@
     /*  Notice: This is the size of the intersection of the two follows lists. */
     public int countMutual(User other) {
         
-        if (other == null || this == other){
+        if (other == null){
             return 0;
         }
 
         int mutualFollowers = 0;
 
-        for (int i = 0; i < this.fCount; i++){
+        for (int i = 0; i < fCount; i++){
             if(other.follows(follows[i])){    
             mutualFollowers++;
                         
